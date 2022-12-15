@@ -1,0 +1,19 @@
+import time
+for s in range(9):
+    cevap = int(input("Parolanızı giriniz: "))
+    if cevap == 123:
+        print("giriş yaptınız")
+        break
+    else:
+        print("parola hatalı")
+        s += 1
+    if s == 3:
+        print("Tekrar denemek için 1 dk bekleyiniz")
+        #time.sleep içerde yazılan sayı kadar saniye durdurur.
+        time.sleep(60)
+    elif s == 6:
+        print("Tekrar denemek için 5 dk bekleyiniz")
+        time.sleep(300)
+    elif s == 9:
+        print("Sistemden 1 günlük ban yediniz, lütfen yarın tekrardan deneyiniz")
+        time.sleep(60*60*24)
